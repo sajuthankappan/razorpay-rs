@@ -1,0 +1,20 @@
+[package]
+name = "razorpay"
+version = "0.1.0"
+authors = ["Saju Thankappan <sajuthankappan@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "Razorpay api bindings"
+homepage = "https://github.com/sajuthankappan/razorpay-rs"
+repository = "https://github.com/sajuthankappan/razorpay-rs"
+readme = "README.md"
+keywords = ["strava"]
+categories = ["api-bindings"]
+
+[dependencies]
+ring = "0.16.18"
+data-encoding = "2.3.1"
+
+[dev-dependencies]
+dotenv = "0.15.0"
+env_logger = "0.8.2"
