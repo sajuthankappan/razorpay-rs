@@ -1,8 +1,8 @@
+use super::Card;
 use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
-use super::Card;
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters)]
+#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
 #[getset(get = "pub", set = "pub")]
 pub struct Payment {
     id: String,
@@ -35,7 +35,7 @@ pub struct Payment {
     created_at: i64,
 }
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters)]
+#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
 #[getset(get = "pub", set = "pub")]
 pub struct AcquirerData {
     auth_code: Option<String>,
