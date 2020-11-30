@@ -17,7 +17,7 @@ pub struct Payment {
     amount_refunded: i32,
     refund_status: Option<String>,
     captured: bool,
-    description: String,
+    description: Option<String>,
     card_id: Option<String>,
     card: Option<Card>,
     invoice_id: Option<String>,
