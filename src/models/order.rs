@@ -1,6 +1,6 @@
 use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
-use serde_json::Value;
+//use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
 #[getset(get = "pub", set = "pub")]
@@ -15,6 +15,6 @@ pub struct Order {
     status: String,
     offer_id: Option<String>,
     attempts: i32,
-    notes: Vec<Value>,
+    //notes: Vec<Value>,
     created_at: i64,
 }
