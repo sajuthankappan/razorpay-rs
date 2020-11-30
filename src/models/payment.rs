@@ -1,6 +1,7 @@
 use super::Card;
 use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
 #[getset(get = "pub", set = "pub")]
@@ -9,21 +10,18 @@ pub struct Payment {
     entity: String,
     amount: i32,
     currency: String,
-    base_amount: Option<i32>,
     status: String,
-    order_id: String,
-    international: bool,
+    base_amount: Option<i32>,
+    base_currency: Option<String>,
     method: String,
-    amount_refunded: i32,
-    refund_status: Option<String>,
-    captured: bool,
+    order_id: String,
     description: Option<String>,
-    card_id: Option<String>,
-    card: Option<Card>,
-    invoice_id: Option<String>,
+    international: bool,
+    refund_status: Option<String>,
+    amount_refunded: i32,
+    captured: bool,
     email: String,
     contact: String,
-    notes: Option<Vec<String>>,
     fee: Option<i32>,
     tax: Option<i32>,
     error_code: Option<String>,
@@ -32,6 +30,10 @@ pub struct Payment {
     error_step: Option<String>,
     error_reason: Option<String>,
     acquirer_data: Option<AcquirerData>,
+    card_id: Option<String>,
+    card: Option<Card>,
+    invoice_id: Option<String>,
+    notes: Vec<Value>,
     created_at: i64,
 }
 
