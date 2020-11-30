@@ -1,7 +1,7 @@
 use super::Card;
 use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
-//use serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
 #[getset(get = "pub", set = "pub")]
@@ -33,7 +33,7 @@ pub struct Payment {
     card_id: Option<String>,
     card: Option<Card>,
     invoice_id: Option<String>,
-    //notes: Vec<Value>,
+    notes: Option<Value>,
     created_at: i64,
 }
 
