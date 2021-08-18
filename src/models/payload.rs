@@ -1,10 +1,8 @@
 use super::{Entity, Order, Payment};
-use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
-#[getset(get = "pub", set = "pub")]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Payload {
-    payment: Option<Entity<Payment>>,
-    order: Option<Entity<Order>>,
+    pub payment: Option<Entity<Payment>>,
+    pub order: Option<Entity<Order>>,
 }

@@ -1,44 +1,41 @@
 use super::Card;
-use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
-#[getset(get = "pub", set = "pub")]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Payment {
-    id: String,
-    entity: String,
-    amount: i32,
-    currency: String,
-    status: String,
-    base_amount: Option<i32>,
-    base_currency: Option<String>,
-    method: String,
-    order_id: String,
-    description: Option<String>,
-    international: bool,
-    refund_status: Option<String>,
-    amount_refunded: i32,
-    captured: bool,
-    email: String,
-    contact: String,
-    fee: Option<i32>,
-    tax: Option<i32>,
-    error_code: Option<String>,
-    error_description: Option<String>,
-    error_source: Option<String>,
-    error_step: Option<String>,
-    error_reason: Option<String>,
-    acquirer_data: Option<AcquirerData>,
-    card_id: Option<String>,
-    card: Option<Card>,
-    invoice_id: Option<String>,
-    notes: Option<Value>,
-    created_at: i64,
+    pub id: String,
+    pub entity: String,
+    pub amount: i32,
+    pub currency: String,
+    pub status: String,
+    pub base_amount: Option<i32>,
+    pub base_currency: Option<String>,
+    pub method: String,
+    pub order_id: String,
+    pub description: Option<String>,
+    pub international: bool,
+    pub refund_status: Option<String>,
+    pub amount_refunded: i32,
+    pub captured: bool,
+    pub email: String,
+    pub contact: String,
+    pub fee: Option<i32>,
+    pub tax: Option<i32>,
+    pub error_code: Option<String>,
+    pub error_description: Option<String>,
+    pub error_source: Option<String>,
+    pub error_step: Option<String>,
+    pub error_reason: Option<String>,
+    pub acquirer_data: Option<AcquirerData>,
+    pub card_id: Option<String>,
+    pub card: Option<Card>,
+    pub invoice_id: Option<String>,
+    pub notes: Option<Value>,
+    pub created_at: i64,
 }
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
-#[getset(get = "pub", set = "pub")]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AcquirerData {
     auth_code: Option<String>,
 }

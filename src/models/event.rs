@@ -1,14 +1,12 @@
 use super::Payload;
-use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
-#[getset(get = "pub", set = "pub")]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Event {
-    entity: String,
-    account_id: String,
-    event: String,
-    contains: Option<Vec<String>>,
-    payload: Payload,
-    created_at: i64,
+    pub entity: String,
+    pub account_id: String,
+    pub event: String,
+    pub contains: Option<Vec<String>>,
+    pub payload: Payload,
+    pub created_at: i64,
 }

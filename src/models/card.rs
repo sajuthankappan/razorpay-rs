@@ -1,18 +1,16 @@
-use getset::{Getters, Setters};
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, Getters, Setters, Clone)]
-#[getset(get = "pub", set = "pub")]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Card {
-    id: String,
-    entity: String,
-    name: String,
-    last4: String,
-    network: String,
+    pub id: String,
+    pub entity: String,
+    pub name: String,
+    pub last4: String,
+    pub network: String,
     #[serde(rename = "type")]
-    card_type: String,
-    issuer: Option<String>,
-    international: bool,
-    emi: bool,
-    sub_type: Option<String>,
+    pub card_type: String,
+    pub issuer: Option<String>,
+    pub international: bool,
+    pub emi: bool,
+    pub sub_type: Option<String>,
 }
