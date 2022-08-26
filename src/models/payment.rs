@@ -14,7 +14,7 @@ pub struct Payment {
     pub method: String,
     pub order_id: String,
     pub description: Option<String>,
-    pub international: bool,
+    pub international: Option<bool>,
     pub refund_status: Option<String>,
     pub amount_refunded: i32,
     pub captured: bool,

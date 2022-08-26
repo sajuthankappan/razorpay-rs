@@ -10,7 +10,7 @@ pub struct Card {
     #[serde(rename = "type")]
     pub card_type: String,
     pub issuer: Option<String>,
-    pub international: bool,
+    pub international: Option<bool>,
     pub emi: bool,
     pub sub_type: Option<String>,
 }
