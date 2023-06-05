@@ -9,7 +9,7 @@ pub struct Order {
     pub amount_paid: i32,
     pub amount_due: i32,
     pub currency: String,
-    pub receipt: String,
+    pub receipt: Option<String>,
     pub status: String,
     pub offer_id: Option<String>,
     pub attempts: i32,
